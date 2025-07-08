@@ -4,7 +4,6 @@
   --pastel-lavender: #efe1ff;
   --pastel-gold: #fff7cc;
   --pastel-turquoise: #ccfbf6;
-  --soft-gray: #f8f8fb;
   --main-text: #3c2d31;
   --accent-pink: #f186b5;
 }
@@ -56,7 +55,6 @@ h1.handwritten {
   to { opacity: 1; }
 }
 
-/* Photo section */
 .photo-section {
   display: flex;
   flex-direction: column;
@@ -92,7 +90,6 @@ h1.handwritten {
   font-weight: 600;
 }
 
-/* Floating hearts */
 .floating-hearts {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -112,7 +109,6 @@ h1.handwritten {
   100% { transform: scale(0.9) translateY(-90px); opacity: 0; }
 }
 
-/* Twinkling stars */
 .twinkling-stars {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -135,7 +131,6 @@ h1.handwritten {
   55% { opacity: 0.6; }
 }
 
-/* Main Buttons */
 .main-buttons {
   display: flex;
   justify-content: center;
@@ -171,7 +166,6 @@ h1.handwritten {
   margin-bottom: 8px;
 }
 
-/* Popups */
 .popup-overlay {
   display: none;
   position: fixed;
@@ -213,7 +207,6 @@ h1.handwritten {
   opacity: 1;
 }
 
-/* Gallery styles */
 .polaroid-gallery .gallery-slides {
   display: flex;
   align-items: center;
@@ -252,7 +245,6 @@ h1.handwritten {
   color: #a64d79;
 }
 
-/* Letter popup */
 .scroll-letter {
   font-family: 'Dancing Script', cursive;
   font-size: 1.25em;
@@ -263,7 +255,6 @@ h1.handwritten {
   min-width: 320px;
 }
 
-/* Poem popup */
 .poem-float {
   font-family: 'Satisfy', 'Dancing Script', cursive;
   font-size: 1.17em;
@@ -275,7 +266,6 @@ h1.handwritten {
   min-height: 120px;
 }
 
-/* Hug Section */
 .hug-section {
   display: flex;
   flex-direction: column;
@@ -302,7 +292,6 @@ h1.handwritten {
   background: linear-gradient(115deg, #ffd6eb, #fff7cc, #ccfbf6);
 }
 
-/* Hug popup animation */
 .hug-popup {
   display: none;
   position: fixed;
@@ -350,7 +339,6 @@ h1.handwritten {
   display: block;
 }
 
-/* If You Were A... */
 .planet-link {
   display: inline-block;
   background: linear-gradient(120deg, #ffd6eb, #fff7cc, #ccfbf6);
@@ -370,7 +358,6 @@ h1.handwritten {
   background: linear-gradient(115deg, #ccfbf6, #ffd6eb, #fff7cc);
 }
 
-/* Secret section */
 .secret-btn {
   display: inline-block;
   background: linear-gradient(120deg, #efe1ff, #ffd6eb, #fff7cc);
@@ -413,7 +400,6 @@ footer {
   color: #c779a2;
 }
 
-/* Responsive */
 @media (max-width: 700px) {
   .main-buttons {
     flex-direction: column;
