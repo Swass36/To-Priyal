@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>If You Were A...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: linear-gradient(120deg, #ffd6eb, #ccfbf6); }
+    .if-you-were-main {
+      max-width: 500px;
+      margin: 50px auto 0 auto;
+      background: #fff8fa;
+      border-radius: 20px;
+      box-shadow: 0 4px 40px #eec8d9;
+      padding: 38px 30px 32px 30px;
+      text-align: center;
+      font-family: 'Quicksand', Arial, sans-serif;
+    }
+    .if-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2em;
+      color: #b66a99;
+      margin-bottom: 18px;
+    }
+    .if-line {
+      font-size: 1.15em;
+      background: linear-gradient(90deg, #ffd6eb 40%, #ccfbf6 100%);
+      margin: 18px 0;
+      padding: 16px 8px;
+      border-radius: 12px;
+      color: #64416b;
+      opacity: 0;
+      transform: translateY(38px);
+      transition: all 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+    }
+    .if-line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 30px;
+      border-radius: 20px;
+      background: #ffe0d2;
+      color: #b66a99;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.1em;
+      text-decoration: none;
+      box-shadow: 0 2px 14px #f9c4d2;
+      transition: background 0.14s;
+    }
+    .back-link:hover {
+      background: #ffd6eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="if-you-were-main">
+    <div class="if-title">If you were a...</div>
+    <div class="if-line">planet, you'd be Venus — bright, brilliant, and full of love.</div>
+    <div class="if-line">song, you'd be the one stuck in my head — forever.</div>
+    <div class="if-line">light, you'd be the one that guides me home.</div>
+    <div class="if-line">flower, you'd be the first to bloom after winter.</div>
+    <div class="if-line">hug, you'd be the kind that never lets go.</div>
+    <div class="if-line">story, you'd be the one I never want to end.</div>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+  <script>
+    // Animation: show lines one by one
+    document.addEventListener('DOMContentLoaded', function() {
+      const lines = document.querySelectorAll('.if-line');
+      let i = 0;
+      function showLine() {
+        if (i < lines.length) {
+          lines[i].classList.add('visible');
+          i++;
+          setTimeout(showLine, 1200);
+        }
+      }
+      showLine();
+    });
+  </script>
+</body>
+</html>
