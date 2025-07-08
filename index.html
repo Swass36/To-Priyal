@@ -46,58 +46,70 @@
     <div class="popup-overlay" id="galleryPopup">
       <div class="popup-content polaroid-gallery">
         <button class="close-popup" type="button">&times;</button>
-        <div class="photo-garden">
-  <!-- Individual images -->
-  <img src="IMG_0108.jpeg" alt="IMG_0108">
-  <img src="IMG_0136.jpeg" alt="IMG_0136">
-  <img src="IMG_0175.jpeg" alt="IMG_0175">
-  <img src="IMG_0186.jpeg" alt="IMG_0186">
-
-  <!-- IMG_1382 to IMG_1399, excluding 1384, 1388, 1389, 1395, 1396 -->
-  <img src="IMG_1382.jpeg" alt="IMG_1382">
-  <img src="IMG_1383.jpeg" alt="IMG_1383">
-  <!-- Skipping 1384 -->
-  <img src="IMG_1385.jpeg" alt="IMG_1385">
-  <img src="IMG_1386.jpeg" alt="IMG_1386">
-  <img src="IMG_1387.jpeg" alt="IMG_1387">
-  <!-- Skipping 1388, 1389 -->
-  <img src="IMG_1390.jpeg" alt="IMG_1390">
-  <img src="IMG_1391.jpeg" alt="IMG_1391">
-  <img src="IMG_1392.jpeg" alt="IMG_1392">
-  <img src="IMG_1393.jpeg" alt="IMG_1393">
-  <img src="IMG_1394.jpeg" alt="IMG_1394">
-  <!-- Skipping 1395, 1396 -->
-  <img src="IMG_1397.jpeg" alt="IMG_1397">
-  <img src="IMG_1398.jpeg" alt="IMG_1398">
-  <img src="IMG_1399.jpeg" alt="IMG_1399">
-
-  <!-- IMG_1402 to IMG_1420, excluding 1406, 1409 -->
-  <img src="IMG_1402.jpeg" alt="IMG_1402">
-  <img src="IMG_1403.jpeg" alt="IMG_1403">
-  <img src="IMG_1404.jpeg" alt="IMG_1404">
-  <img src="IMG_1405.jpeg" alt="IMG_1405">
-  <!-- Skipping 1406 -->
-  <img src="IMG_1407.jpeg" alt="IMG_1407">
-  <img src="IMG_1408.jpeg" alt="IMG_1408">
-  <!-- Skipping 1409 -->
-  <img src="IMG_1410.jpeg" alt="IMG_1410">
-  <img src="IMG_1411.jpeg" alt="IMG_1411">
-  <img src="IMG_1412.jpeg" alt="IMG_1412">
-  <img src="IMG_1413.jpeg" alt="IMG_1413">
-  <img src="IMG_1414.jpeg" alt="IMG_1414">
-  <img src="IMG_1415.jpeg" alt="IMG_1415">
-  <img src="IMG_1416.jpeg" alt="IMG_1416">
-  <img src="IMG_1417.jpeg" alt="IMG_1417">
-  <img src="IMG_1418.jpeg" alt="IMG_1418">
-  <img src="IMG_1419.jpeg" alt="IMG_1419">
-  <img src="IMG_1420.jpeg" alt="IMG_1420">
-
-  <!-- Video file insertion -->
-  <video width="320" height="240" controls>
+        <div class="photo-garden" style="text-align: center;">
+  <button onclick="plusSlides(-1)" style="font-size:2em;">&#10094;</button>
+  
+  <img class="mySlides" src="IMG_0108.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_0136.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_0175.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_0186.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1382.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1383.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1385.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1386.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1387.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1390.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1391.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1392.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1393.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1394.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1397.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1398.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1399.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1402.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1403.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1404.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1405.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1407.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1408.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1410.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1411.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1412.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1413.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1414.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1415.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1416.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1417.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1418.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1419.jpeg" style="width:80%;display:none">
+  <img class="mySlides" src="IMG_1420.jpeg" style="width:80%;display:none">
+  <!-- Video as a slide! -->
+  <video class="mySlides" style="width:80%;display:none" controls>
     <source src="InShot_20250322_161348463.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  
+  <button onclick="plusSlides(1)" style="font-size:2em;">&#10095;</button>
 </div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+</script>
         <div class="gallery-nav">
           <button id="prevPhoto" type="button">&#8592;</button>
           <button id="nextPhoto" type="button">&#8594;</button>
