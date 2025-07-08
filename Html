@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dear Sister</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <!-- 1. Intro Greeting Section -->
+    <section class="intro-section">
+      <h1 class="handwritten typewriter" id="dearSisterHeading">Dear Sister...</h1>
+      <p class="intro-quote fade-in">In case I forgot to say it — you made my world better, just by being in it.</p>
+    </section>
+
+    <!-- 2. Her Photo with Floating Animations -->
+    <section class="photo-section">
+      <div class="photo-frame">
+        <img src="your-sister-photo.jpg" alt="Sister Photo" class="sister-img">
+        <!-- Animated floating hearts & stars -->
+        <div class="floating-hearts"></div>
+        <div class="twinkling-stars"></div>
+      </div>
+      <p class="magic-quote">You’re magic, and I hope you never forget that.</p>
+    </section>
+
+    <!-- 3. Three Main Buttons -->
+    <section class="main-buttons">
+      <button class="card-btn" id="galleryBtn" type="button">
+        <span class="icon">📸</span>
+        <span>The photo garden</span>
+      </button>
+      <button class="card-btn" id="letterBtn" type="button">
+        <span class="icon">📜</span>
+        <span>Unsent but always meant</span>
+      </button>
+      <button class="card-btn" id="poemBtn" type="button">
+        <span class="icon">📝</span>
+        <span>You, in every metaphor</span>
+      </button>
+    </section>
+
+    <!-- Popup overlays -->
+    <div class="popup-overlay" id="galleryPopup">
+      <div class="popup-content polaroid-gallery">
+        <button class="close-popup" type="button">&times;</button>
+        <div class="gallery-slides">
+          <img src="photo1.jpg" class="gallery-photo active">
+          <img src="photo2.jpg" class="gallery-photo">
+          <img src="photo3.jpg" class="gallery-photo">
+        </div>
+        <div class="gallery-nav">
+          <button id="prevPhoto" type="button">&#8592;</button>
+          <button id="nextPhoto" type="button">&#8594;</button>
+        </div>
+      </div>
+    </div>
+    <div class="popup-overlay" id="letterPopup">
+      <div class="popup-content scroll-letter">
+        <button class="close-popup" type="button">&times;</button>
+        <div class="letter-typewriter"></div>
+      </div>
+    </div>
+    <div class="popup-overlay" id="poemPopup">
+      <div class="popup-content poem-float">
+        <button class="close-popup" type="button">&times;</button>
+        <div class="poem-lines"></div>
+      </div>
+    </div>
+
+    <!-- 4. Click for a Hug Button -->
+    <section class="hug-section">
+      <button class="hug-btn" id="hugBtn" type="button">Need a Hug?</button>
+      <div class="hug-popup" id="hugPopup">
+        <div class="teddy-container">
+          <img src="teddy-bear.svg" alt="Hugging Teddy" class="hug-teddy">
+          <div class="hug-message">
+            This hug is warm, tight, and endless — just like my love for you.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. "If You Were A..." Page Link -->
+    <section class="if-you-were-section">
+      <a href="if-you-were.html" class="planet-link">If You Were A Planet / Song / Light…</a>
+    </section>
+
+    <!-- 6. Secret Password Page -->
+    <section class="secret-section">
+      <a href="secret.html" class="secret-btn">
+        <span class="moon-icon">🌙</span>
+        Wanna Find a Secret?
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-quote">
+      “Some hearts are stitched into your soul. Yours lives in mine.”
+    </div>
+    <div class="footer-signoff">
+      Forever your annoying little one, Guddu 🌙
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
