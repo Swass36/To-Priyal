@@ -188,11 +188,31 @@ function showSlides(n) {
 
     <!-- 6. Secret Password Page -->
     <section class="secret-section">
-      <a href="secret.html" class="secret-btn">
+      <!-- Changed from link to button to open popup -->
+      <button class="secret-btn" id="openSecretPopup" type="button">
         <span class="moon-icon">🌙</span>
         Wanna Find a Secret?
-      </a>
+      </button>
     </section>
+
+    <!-- Secret Password Popup (starts here, included inline with main page) -->
+    <div class="popup-overlay" id="secretPopup" style="display:none;">
+      <div class="popup-content secret-content" style="min-width:300px;max-width:95vw;">
+        <button class="close-popup" id="closeSecretPopup" type="button" style="float:right;font-size:2em;">&times;</button>
+        <h2 class="handwritten">Wanna Find a Secret?</h2>
+        <div class="secret-instructions">
+          Enter the secret password to unlock a surprise!<br>
+          <span class="hint-text" id="hintText">Hint 1: Name invented while watching Ahilya.</span>
+        </div>
+        <div class="password-form" style="margin:20px 0;">
+          <input type="text" id="secretInput" placeholder="Type your guess here..." autocomplete="off" style="padding:8px 12px;border-radius:6px;border:1px solid #ccc;">
+          <button id="submitSecret" type="button" style="padding:8px 16px;margin-left:8px;border-radius:6px;background:#ffe4b5;border:none;font-weight:bold;">Unlock</button>
+        </div>
+        <div class="secret-message" id="secretMessage"></div>
+      </div>
+    </div>
+    <!-- End Secret Popup -->
+
   </main>
 
   <footer>
@@ -204,6 +224,63 @@ function showSlides(n) {
     </div>
   </footer>
 
+  <!-- Your existing JS -->
   <script src="script.js"></script>
+  <!-- Secret Popup JS Logic (must be after HTML) -->
+  <script>
+    // Popup open/close logic
+    document.getElementById("openSecretPopup").onclick = function() {
+      document.getElementById("secretPopup").style.display = "flex";
+      document.getElementById("secretInput").value = "";
+      document.getElementById("secretMessage").innerHTML = "";
+      document.getElementById("hintText").innerHTML = "Hint 1: Name invented while watching Ahilya.";
+      attempts = 0;
+    };
+    document.getElementById("closeSecretPopup").onclick = function() {
+      document.getElementById("secretPopup").style.display = "none";
+    };
+
+    // Secret password logic
+    const correctPassword = "chullibai";
+    const hints = [
+      "Hint 1: Name invented while watching Ahilya.",
+      "Hint 2: Starts with <b>c</b>.",
+      "Hint 3: Ends with <b>bai</b>.",
+      "Hint 4: No space in between and no capital.",
+      "Hint 5: More like a chuhi.",
+    ];
+    let attempts = 0;
+
+    document.getElementById("submitSecret").onclick = function() {
+      const input = document.getElementById("secretInput").value.trim();
+      const messageDiv = document.getElementById("secretMessage");
+      if (input.toLowerCase() === correctPassword) {
+        messageDiv.innerHTML = `
+          <div class='secret-success'>
+            <p>Yay! You got it. 🌙</p>
+            <img src="IMG_1421.jpeg" alt="Us" style="max-width:300px;border-radius:10px;margin-bottom:15px;">
+            <div style="margin:15px 0; background: #fff8ee; padding:18px 22px; border-radius:10px; font-family: 'Quicksand', sans-serif; box-shadow:0 2px 8px #0002;">
+              <strong>My letter to you:</strong><br>
+              Dear Chitubhi,<br><br>
+              I’m so glad you remembered this silly nickname. You’re not just my sister, you’re my best friend and my favorite person to make memories with.<br><br>
+              I love you more than I can say. And I’ll always be here, no matter what.<br><br>
+              Love always,<br>
+              Guddu
+            </div>
+          </div>
+        `;
+        document.getElementById("hintText").innerHTML = "";
+      } else {
+        attempts++;
+        if (attempts < hints.length) {
+          document.getElementById("hintText").innerHTML = hints[attempts];
+          messageDiv.innerHTML = "<span class='secret-fail'>Nope! Try again, here’s another hint…</span>";
+        } else {
+          document.getElementById("hintText").innerHTML = "All hints given! Think about a chuhi with a twist after watching Ahilya 😉";
+          messageDiv.innerHTML = "<span class='secret-fail'>Last try! You can do it!</span>";
+        }
+      }
+    };
+  </script>
 </body>
 </html>
